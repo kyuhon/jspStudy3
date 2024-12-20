@@ -14,6 +14,7 @@ public class WriteProAction implements CommandAction {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		request.setCharacterEncoding("UTF-8");
 		BoardVO article = new BoardVO();//데이터처리 빈
 		 article.setNum(Integer.parseInt(request.getParameter("num")));
 		 article.setWriter(request.getParameter("writer"));

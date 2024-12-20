@@ -56,7 +56,7 @@ public class BoardDAO {
 		ConnectionPool cp = ConnectionPool.getInstance();
 		Connection con = cp.dbCon();
 		PreparedStatement pstmt = null;
-
+		
 		// 현재 보드속에 가장최고값 + 1, 없으면 1
 		ResultSet rs = null;
 		int number = 0;

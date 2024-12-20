@@ -11,10 +11,11 @@ public class DeleteFormAction implements CommandAction {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		request.setCharacterEncoding("UTF-8");
 		int num = Integer.parseInt(request.getParameter("num"));
 		String pageNum = request.getParameter("pageNum");
-		request.setAttribute("num", new Integer(num));
-		request.setAttribute("pageNum", new Integer(pageNum));
+		request.setAttribute("num", num);
+		request.setAttribute("pageNum", pageNum);
 		return new ActionForward("/board/deleteForm.jsp", false);
 	}
 

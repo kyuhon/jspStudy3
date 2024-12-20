@@ -19,8 +19,7 @@ String pageNum = (String) request.getAttribute("pageNum");
 			action="deletePro.do?pageNum=<%=pageNum%>"
 			onsubmit="return deleteSave()">
 			<input type="hidden" name="num" value="<%=num%>">
-			<table border="1" align="center" cellspacing="0" cellpadding="0"
-				width="360">
+			<table border="1" align="center" cellspacing="0" cellpadding="0" width="360">
 				<tr height="30">
 					<td align=center bgcolor="<%=value_c%>"><b>비밀번호를 입력해 주세요.</b></td>
 				</tr>
@@ -30,8 +29,8 @@ String pageNum = (String) request.getAttribute("pageNum");
 					</td>
 				</tr>
 				<tr height="30">
-					<td align=center bgcolor="<%=value_c%>"><input type="submit"
-						value="글삭제"> <input type="button" value="글목록"
+					<td align=center bgcolor="<%=value_c%>"><input type="submit" value="글삭제"> 
+						<input type="button" value="글목록"
 						onclick="document.location.href='list.jsp?pageNum=<%=pageNum%>'">
 					</td>
 				</tr>

@@ -13,7 +13,8 @@ public class ContentAction implements CommandAction {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		 	int num = Integer.parseInt(request.getParameter("num"));
+			request.setCharacterEncoding("UTF-8");
+			int num = Integer.parseInt(request.getParameter("num"));
 	        //해당 페이지 번호
 	        String pageNum = request.getParameter("pageNum");
 	        BoardDAO dbPro = BoardDAO.getInstance();//DB처리

@@ -9,7 +9,7 @@ boolean flag = (Boolean)request.getAttribute("flag");
  }else{
  %>
    <script language="JavaScript">      
-   alert("비밀번호가 맞지 않습니다");
+   alert("비밀번호가 맞지 않습니다 1");
    history.go(-1);
    </script>
  <%

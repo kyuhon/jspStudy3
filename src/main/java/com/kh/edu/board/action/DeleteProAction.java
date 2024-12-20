@@ -19,6 +19,8 @@ public class DeleteProAction implements CommandAction {
 	        String pass = request.getParameter("pass");
 	        BoardDAO dbPro = BoardDAO.getInstance();
 	        BoardVO vo = new BoardVO();
+	        vo.setNum(num);
+	        vo.setPass(pass);
 	        boolean flag = dbPro.deleteDB(vo);
 	        request.setAttribute("pageNum", pageNum);
 	        request.setAttribute("flag", flag);

@@ -1,4 +1,4 @@
-package com.kh.edu.board.control;
+package com.kh.edu.buatan.control;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.kh.edu.board.action.CommandAction;
+import com.kh.edu.buatan.action.CommandAction;
 
 
 public class ControlServlet extends HttpServlet {

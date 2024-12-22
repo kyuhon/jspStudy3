@@ -9,8 +9,7 @@ BoardVO article = (BoardVO)request.getAttribute("article");
 <head>
 <title>게시판</title>
 <link href="style.css" rel="stylesheet" type="text/css">
-<script language="javascript"
-	src="script.js?timestamp=<%= System.currentTimeMillis() %>"></script>
+<script language="javascript" src="script.js?timestamp=<%= System.currentTimeMillis() %>"></script>
 </head>
 <body bgcolor="<%=bodyback_c%>">
 	<main>

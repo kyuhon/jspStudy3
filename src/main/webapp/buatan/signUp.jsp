@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SignUp</title>
 <link rel="stylesheet" href="css/signUp.css">
-<script language="javascript" src="js/script.js"></script>
+<script language="javascript" src="script.js?timestamp=<%= System.currentTimeMillis() %>"></script>
 </head>
 <body>
 	<header>
@@ -38,8 +38,8 @@
 			<li class="x"><a href="#">About us</a></li>
 			<li class="x"><a href="#">Sell</a></li>
 			<li class="x"><a href="#">Board</a></li>
-			<li class="x"><a href="#">Sign up</a></li>
-			<li class="x"><a href="#">Sign in</a></li>
+			<li class="x"><a href="signUp.jsp">Sign up</a></li>
+			<li class="x"><a href="signIn.jsp">Sign in</a></li>
 		</ul>
 	</header>
 	<div class="main_image">
@@ -51,24 +51,24 @@
 			<form method="post" action="regProc.jsp" name="regForm1">
 				<table border="1">
 					<tr>
-						<td align="right">아이디  </td>
+						<td align="right">ID</td>
 						<td>&nbsp;&nbsp;<input type="text" id="id" name="id" />&nbsp; <input
 							type="button" value="중복확인" onClick="idCheck()" /></td>
 					</tr>
 					<tr>
-						<td align="right">패스워드  </td>
+						<td align="right">PASSWORD</td>
 						<td>&nbsp;&nbsp;<input type="password" name="pass" /></td>
 					</tr>
 					<tr>
-						<td align="right">패스워드 확인  </td>
+						<td align="right">CONFIRM PASSWORD</td>
 						<td>&nbsp;&nbsp;<input type="password" name="repass" /></td>
 					</tr>
 					<tr>
-						<td align="right">이름  </td>
+						<td align="right">NAME</td>
 						<td>&nbsp;&nbsp;<input type="text" id="name" name="name" /></td>
 					</tr>
 					<tr>
-						<td align="right">전화번호  </td>
+						<td align="right">TEL</td>
 						<td>&nbsp;&nbsp;<select name="phone1">
 								<option value="02">02</option>
 								<option value="010">010</option>
@@ -76,20 +76,20 @@
 							type="text" id="phone3" name="phone3" size="5" /></td>
 					</tr>
 					<tr>
-						<td align="right">이메일  </td>
+						<td align="right">EMAIL</td>
 						<td>&nbsp;&nbsp;<input type="text" id="email" name="email" /></td>
 					</tr>
 					<tr>
-						<td align="right">우편번호  </td>
+						<td align="right">ZIP</td>
 						<td>&nbsp;&nbsp;<input type="text" id="zipcode" name="zipcode" /> <input
 							type="button" value="찾기" onClick="zipCheck()" /></td>
 					</tr>
 					<tr>
-						<td align="right">주소</td>
+						<td align="right">ADDRESS</td>
 						<td>&nbsp;&nbsp;<input type="text" id="address1" name="address1" /></td>
 					</tr>
 					<tr>
-						<td align="right">상세주소</td>
+						<td align="right">DETAILED ADDRESS</td>
 						<td>&nbsp;&nbsp;<input type="text" id="address2" name="address2" /></td>
 					</tr>
 					<tr class="bt">

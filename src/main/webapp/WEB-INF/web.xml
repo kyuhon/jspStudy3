@@ -11,10 +11,10 @@
   </welcome-file-list>
   <servlet>
     <servlet-name>controlServlet</servlet-name>
-    <servlet-class>com.kh.edu.board.control.ControlServlet</servlet-class>
+    <servlet-class>com.kh.edu.buatan.control.ControlServlet</servlet-class>
       <init-param>
       <param-name>propertyConfig</param-name>
-      <param-value>CommandPro.properties</param-value>
+      <param-value>BuatanCommand.properties</param-value>
     </init-param>
   </servlet>
   <servlet-mapping>

@@ -51,9 +51,9 @@
         <ul class="header_right">
             <li class="x"><a href="#" >About us</a></li>
             <li class="x"><a href="#" >Sell</a></li>
-            <li class="x"><a href="#">Board</a></li>
+            <li class="x"><a href="board.do">Board</a></li>
             <li class="x"><a href="signUp.jsp">Sign up</a></li>
-            <li class="x"><a href="#">Sign in</a></li>
+            <li class="x"><a href="signIn.jsp">Sign in</a></li>
         </ul>
     </header>
     
@@ -71,7 +71,7 @@
     </div>
         <div class="a">
             <div>
-            <a href="#"><img src="image/DSC04190.JPG" alt="a" width="700px" height="500px"></a>
+            <a href="#"><img src="image/DSC04190.JPG" alt="a" width="100%" height="500px"></a>
             </div>
             <div>
             <p>Our Creative Team have built four collections to suit your projects.</p>
@@ -82,7 +82,7 @@
         </div>
         <div class="b">
             <div>
-            <a href="#"><img src="image/DSC04422.JPG" alt="b" width="700px" height="500px"></a>
+            <a href="#"><img src="image/DSC04422.JPG" alt="b" width="100%" height="500px"></a>
             </div>
             <div>
             <p>Alamy's Archives: A deep chronicle of prominent figures, historical events, inventions, and launches.</p>
@@ -93,7 +93,7 @@
         </div>
         <div class="c">
             <div>
-                <a href="#"><img src="image/DSC05469.JPG" alt="c" width="700px" height="500px"></a>
+                <a href="#"><img src="image/DSC05469.JPG" alt="c" width="100%" height="500px"></a>
                 </div>
                 <div>
                 <p>The home of the latest news, sport and entertainment imagery.</p>
@@ -104,7 +104,7 @@
         </div>
         <div class="d">
             <div>
-                <a href="#"><img src="image/DSC04743.JPG" alt="d" width="700px" height="500px"></a>
+                <a href="#"><img src="image/DSC04743.JPG" alt="d" width="100%" height="500px"></a>
                 </div>
                 <div>
                 <p>Alamy's live news feed for the latest news, sports and entertainment images.</p>
@@ -115,7 +115,7 @@
         </div>
         <div class="e">
             <div>
-                <a href="#"><img src="image/DSC05188.JPG" alt="e" width="700px" height="500px"></a>
+                <a href="#"><img src="image/DSC05188.JPG" alt="e" width="100%" height="500px"></a>
                 </div>
                 <div>
                 <p>We're here to customise licenses that perfectly suit your projects, and provide you with high-res
@@ -128,7 +128,7 @@
         </div>
         <div class="f">
             <div>
-                <a href="#"><img src="image/DSC05247.JPG" alt="f" width="700px" height="500px"></a>
+                <a href="#"><img src="image/DSC05247.JPG" alt="f" width="100%" height="500px"></a>
                 </div>
                 <div>
                 <p>Discover and own iconic images from skilled photographers at Alamy Prints Store, with expert craftsmanship,

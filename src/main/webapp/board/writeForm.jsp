@@ -17,9 +17,7 @@ depth = (Integer)request.getAttribute("depth");
 </head>
 <!--// 나중에 새글 답별글 구분하는 코드 추가 <1> -->
 <body bgcolor="<%=bodyback_c%>">
-	<main>
-		<b>글쓰기</b>
-	</main>
+	<b>글쓰기</b>
 	<br></br>
 	<form method="post" name="writeForm" action="writePro.do" onsubmit="return writeSave()">
 		<input type="hidden" name="num" value="<%=num%>">

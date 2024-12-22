@@ -147,8 +147,6 @@ ul  > li:hover > a {
     outline: none;
   }
 
-
-
   .camera-button,
   .search-button {
     border: none;
@@ -164,6 +162,14 @@ ul  > li:hover > a {
   .search-button:hover {
     color: #000;
   }
+  
+.board {
+	margin: 100px auto;
+	width: 1000px;
+	height: auto;
+	font-size: 18px;
+	color: #333;
+}
 
 
 footer{

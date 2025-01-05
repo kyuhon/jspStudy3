@@ -15,6 +15,7 @@ import com.kh.edu.common.ConnectionPool;
 
 
 
+
 public class BoardDAO {
 	// 싱글톤1
 	private static BoardDAO instance;

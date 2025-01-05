@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>buatan</title>
-    <link rel="stylesheet" href="css/title.css">
+    <title>myPage</title>
+    <link rel="stylesheet" href="css/myPage.css">
 </head>
 <body>
     <div class="head">
@@ -16,9 +16,12 @@
     <div class="main_image">
         <img src="image/원주_반계리야간2_horiz_241108_hongjukwon.jpg" alt="배경" width="100%" height="670px">
     </div>
-    <div class="main">
-    	<%@ include file="/buatan/piece/main.jsp"%>
-    </div>
+
+		<div class="myPage">
+				<a href="cartList.jsp">Cart List</a>
+				<a href="modifyForm.jsp">Edit Member</a>
+				<a href="deleteForm.jsp" class="logout">Cancel Member</a>
+		</div>
     
     <footer>
         <p>footer</p>

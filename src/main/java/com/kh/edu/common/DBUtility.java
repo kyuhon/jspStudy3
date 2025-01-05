@@ -13,7 +13,7 @@ public class DBUtility {
 
 	public static Connection dbCon() {
 		// 1. db.properties 파일 에서 id, pw 가져오기
-		String filePath = "C:\\div\\eclipse-workspace\\jspStudy3\\src\\main\\java\\com\\kh\\edu\\common\\db.properties";
+		String filePath = "C:\\dev\\eclipse-workspace\\Buatan\\src\\main\\java\\common\\db.properties";
 		Properties pt = new Properties();
 		try {
 			pt.load(new FileReader(filePath));

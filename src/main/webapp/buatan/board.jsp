@@ -23,77 +23,47 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 <script language="javascript" src="script.js?timestamp=<%= System.currentTimeMillis() %>"></script>
 </head>
 <body>
-	<header>
-		<ul>
-			<a href="title.jsp"><p>buatan</p></a>
-			<li class="dropdown"><a href="#" class="dropbtn">Images</a>
-				<div class="dropdown-content">
-					<a href="#">Image homepage</a> <a href="#">Photos</a> <a href="#">Vectors</a>
-					<a href="#">Illustrations</a> <a href="#">panoramic images</a> <a
-						href="#">Image categories</a> <a href="#">Contributor
-						spotlight</a>
-				</div></li>
-			<li class="dropdown"><a href="#" class="dropbtn">Videos</a>
-				<div class="dropdown-content">
-					<a href="#">Videos homepage</a> <a href="#">Video collections</a>
-				</div></li>
-			<li class="dropdown"><a href="#" class="dropbtn">Creative</a>
-				<div class="dropdown-content">
-					<a href="#">Image homepage</a> <a href="#">Fresh picks</a>
-				</div></li>
-			<li class="dropdown"><a href="#" class="dropbtn">More</a>
-				<div class="dropdown-content">
-					<a href="#">Editorial</a> <a href="#">Archive</a> <a href="#">Blog</a>
-					<a href="#">Enterprise</a>
-				</div></li>
-		</ul>
-		<ul class="header_right">
-			<li class="x"><a href="#">About us</a></li>
-			<li class="x"><a href="#">Sell</a></li>
-			<li class="x"><a href="#">Board</a></li>
-			<li class="x"><a href="signUp.jsp">Sign up</a></li>
-			<li class="x"><a href="signIn.jsp">Sign in</a></li>
-		</ul>
-	</header>
+	<%@ include file="/buatan/piece/header.jsp"%>
 	
 	<div class="main_image">
 		<img src="image/원주_반계리야간2_horiz_241108_hongjukwon.jpg" alt="배경"
 			width="100%" height="670px">
 	</div>
 	
-	<div class="board" align="center">
-		<b>글목록(전체 글:<%=count%>)</b>
-		<table width="700">
+	<div class="body">
+	<div class="board" >
+		<div class="tableHead">
 			<tr>
-				<td align="right"><a href="writeForm.do">글쓰기</a></td>
+				<b>글목록(전체 글:<%=count%>)</b>
+				<p><a href="writeForm.do">글쓰기</a></p>
 			</tr>
-		</table>
+			</div>
 		<%
 		if (count == 0) {
 		%>
-		<table width="700" border="1" cellpadding="0" cellspacing="0">
+		<table>
 			<tr>
 				<td align="center">게시판에 저장된 글이 없습니다.</td>
 		</table>
 		<%
 		} else {
 		%>
-		<table border="1" width="700" cellpadding="0" cellspacing="0" align="center">
-			<tr height="30" ">
-				<td align="center" width="50">번 호</td>
-				<td align="center" width="250">제 목</td>
-				<td align="center" width="100">작성자</td>
-				<td align="center" width="150">작성일</td>
-				<td align="center" width="50">조 회</td>
-				<td align="center" width="100">IP</td>
+		<table>
+			<tr>
+				<th>번 호</th>
+				<th>제 목</th>
+				<th>작성자</th>
+				<th>작성일</th>
+				<th>조 회</th>
+				<th>IP</th>
 			</tr>
 			<%
 			for (BoardVO article: articleList) {
 			%>
-			<tr height="30">
-				<td align="center" width="50"><%=number--%></td>
+			<tr >
+				<td ><%=number--%></td>
 				<!-- 위에 -- 모지? -->
-				<td width="250">
+				<td >
 					<!-- 수정 <5> --> 
 				<a href="content.do?num=<%=article.getNum()%>&pageNum=<%=currentPage%>">
 				<%
@@ -114,16 +84,16 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 						<%=article.getSubject()%>
 						</a> 
 						<% if (article.getReadcount() >= 20) { %> 
-						<img src="images/hot.gif" border="0" height="16">
+						<img src="image/hot.gif" border="0" height="16">
 					<%
 					}
 					%>
 				</td>
-				<td align="center" width="100">
+				<td >
 				<a href="mailto:<%=article.getEmail()%>"> <%=article.getWriter()%></a></td>
-				<td align="center" width="150"><%=sdf.format(article.getRegdate())%></td>
-				<td align="center" width="50"><%=article.getReadcount()%></td>
-				<td align="center" width="100"><%=article.getIp()%></td>
+				<td ><%=sdf.format(article.getRegdate())%></td>
+				<td ><%=article.getReadcount()%></td>
+				<td ><%=article.getIp()%></td>
 			</tr>
 			<%
 			}
@@ -133,11 +103,12 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	 %>
 		</table>
 	</div>
+	</div>
 	<br>
-		<div align="center">
+		<div class="page">
 	 <%	//페이지번호
     if (count > 0) {
-        int pageBlock = 5;	//보여줄페이지
+        int pageBlock = 10;	//보여줄페이지
         int imsi = count % pageSize == 0 ? 0 : 1;
         int pageCount = count / pageSize + imsi;
         int startPage = (int)((currentPage-1)/pageBlock)*pageBlock + 1;
@@ -145,13 +116,13 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         if (endPage > pageCount) endPage = pageCount;  
         if (startPage > pageBlock) {    
    %>
-        <a href="board.do?pageNum=<%=startPage-pageBlock%>">[이전]</a>
+        <a href="board.do?pageNum=<%=startPage-pageBlock%>">이전</a>
    <%
         }
         for (int i = startPage ; i <= endPage ; i++) { 
         	if(currentPage == i){
    %>     		
-        		<a href="board.do?pageNum=<%= i %>">[[<%= i %>]]</a>
+        		<a href="board.do?pageNum=<%= i %>">[<%= i %>]</a>
    <%     		
         	} else {
    %>     		
@@ -162,7 +133,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         
         if (endPage < pageCount) { 
    %>
-        <a href="board.do?pageNum=<%=startPage+pageBlock%>">[다음]</a>
+        <a href="board.do?pageNum=<%=startPage+pageBlock%>">다음</a>
    <%
           }
       }
@@ -173,5 +144,6 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	<footer>
 		<p>footer</p>
 	</footer>
+	
 </body>
 </html>

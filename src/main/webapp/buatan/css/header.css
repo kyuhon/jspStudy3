@@ -95,25 +95,3 @@ ul  > li:hover > a {
     display: flex;
     justify-content: flex-end;
 }
-
-.heart{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-}
-
-.main_image{
-    position: relative;
-}
-
-
-
-footer{
-    width: 100%;
-    height: 300px;
-    font-size: 100px;
-    background-color: black;
-    border: 2px solid black;
-    color: white;
-
-}

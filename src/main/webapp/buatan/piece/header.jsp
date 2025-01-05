@@ -1,17 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	String id = (String)session.getAttribute("id");
+%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>buatan</title>
-    <link rel="stylesheet" href="css/title.css">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/header.css">
+<title>header</title>
 </head>
 <body>
-    <header>
+	<header>
         <ul>
-            <a href="title.jsp"><p>buatan</p></a>
+            <a href="./title.jsp"><p>buatan</p></a>
             <li class="dropdown">
                 <a href="#" class="dropbtn">Images</a>
                 <div class="dropdown-content">
@@ -51,21 +53,20 @@
         <ul class="header_right">
             <li class="x"><a href="#" >About us</a></li>
             <li class="x"><a href="#" >Sell</a></li>
-            <li class="x"><a href="board.do">Board</a></li>
-            <li class="x"><a href="signUp.jsp">Sign up</a></li>
+            <li class="x"><a href="check/checkSession.jsp?target=/jspStudy3/buatan/board.do">Board</a></li>
+            <li class="x"><a href="./signUp.jsp">Sign up</a></li>
+						<% if(id != null){ %>
+						<li class="dropdown">
+                <a href="#" class="dropbtn"><%=id%></a>
+                <div class="dropdown-content">
+                    <a href="myPage.jsp">MyPage</a>
+                    <a href="sign/logoutProc.jsp">Logout</a>
+                </div>
+            </li>
+            <% }else{ %>
             <li class="x"><a href="signIn.jsp">Sign in</a></li>
+            <%} %>
         </ul>
     </header>
-    
-    <div class="main_image">
-        <img src="image/원주_반계리야간2_horiz_241108_hongjukwon.jpg" alt="배경" width="100%" height="670px">
-    </div>
-    <div>
-    </div>
-    <footer>
-        <p>footer</p>
-    </footer>
-
-
 </body>
 </html>

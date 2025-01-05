@@ -1,176 +1,106 @@
 @charset "UTF-8";
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
 
-body {
-    position: relative;
-    /* 폰트사이즈, 구글폰트, 글자간격 */ 
-}
-
-header {
-    font-size: 13px;
-    display: flex;
-    flex-wrap: nowrap;
-    position: sticky;
-    z-index: 10;
-}
-
-ul > a {
-    text-decoration: none;
-    font-style: italic;
-    font-size: 35px;
-    color: white;
-    font-weight: 800;
-}
-/* 메뉴css */
-ul {
-    border: 1px dotted black;
-    list-style: none;
-    background-color: rgb(0, 0, 0);
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-}
-
-ul > li { 
-    display: inline-block;
-    width: 100px;
-    padding: 10px 2px; 
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    
-}
-ul > li > a {
-    text-decoration: none;
-    color: white;
-}
-
-ul > li > div > a { 
-    text-decoration: none;
-    display: inline-block;
-    color: black;
-    width: 50px;
-
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
-}
-ul  > li:hover > a {
-    color: rgb(79, 219, 79)
-}
-
-.dropdown {
-    position: relative;
-} 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    min-width: 200px;
-    z-index: 1;
-    top: 35px;
-    box-shadow: 10px 15px 7px black;
-} 
-
-.dropdown-content a{
-    display: block;
-    padding: 20px 20px;
-} 
-
-.dropdown-content a:hover{
-    color: rgb(79, 219, 79)
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.header_right {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.heart{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-}
-
-.main_image{
-    position: relative;
-}
-
-.search-container {
-    display: flex;
-    align-items: center;
-    background: white;
-    width: 1000px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-
-    position: absolute;
-    top: 9%;
-    left: 49%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    padding: 10px 20px; 
-  }
   
-  .dropdownb {
-    margin-right: 10px; 
-  }
-  
-  .dropdown-button {
-    background: none;
-    border: none;
-    font-size: 14px;
-    cursor: pointer;
-    color: #555;
-  }
-  
-  .search-input {
-    flex: 1;
-    border: none;
-    padding: 10px;
-    font-size: 14px;
-    margin: 0 10px;
-  }
-  
-  .search-input:focus {
-    outline: none;
-  }
+.body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
 
-  .camera-button,
-  .search-button {
-    border: none;
-    background: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 16px;
-    color: #888;
-    margin-left: 10px;
-  }
-  
-  .camera-button:hover,
-  .search-button:hover {
-    color: #000;
-  }
-  
 .board {
-	margin: 100px auto;
-	width: 1000px;
-	height: auto;
-	font-size: 18px;
-	color: #333;
+    width: 80%;
+    margin: 50px auto;
+    background: white;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.tableHead {
+    display: flex;
+    justify-content: space-between;
+}
+
+.board th {
+    text-align: center;
+}
+
+.board td {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.board td a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+tr td:first-child {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.board a:hover {
+    color: rgb(79, 219, 79);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.page {
+		margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page > a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.page > a:hover {
+		color: rgb(79, 219, 79);
+}
+
+input[type="button"] {
+	width: 100px;
+	height: 30px;
+	border: none;
+	color: white;
+	background-color: black;
+}
+input[type="submit"] {
+	width: 100px;
+	height: 30px;
+	border: none;
+	color: white;
+	background-color: black;
+}
+input[type="reset"] {
+	width: 100px;
+	height: 30px;
+	border: none;
+	color: white;
+	background-color: black;
+}
 
 footer{
     width: 100%;

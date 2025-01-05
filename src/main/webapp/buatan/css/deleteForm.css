@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.signIn{
+.deleteForm{
 	display:flex;
 	justify-content: center;
 	margin: 1px;
@@ -22,11 +22,6 @@ td {
 }
 
 
-#id {
-	width: 250px;
-	height: 30px;
-}
-
 input[type="password"] {
 	width: 250px;
 	height: 30px;
@@ -46,7 +41,6 @@ input[type="button"] {
 	color: white;
 	background-color: black;
 }
-
 
 
 footer{

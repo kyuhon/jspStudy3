@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    position: relative;
+}
+
+.myPage {
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.myPage > a {
+    border-radius: 50px;
+    font-style: italic;
+    text-decoration: none;
+    font-size: 70px;
+    width: 300px;
+    height: 200px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+a:hover {
+    color: rgb(79, 219, 79);
+}
+
+.myPage > .logout:hover {
+    color: red;
+}
+
+footer {
+    width: 100%;
+    height: 300px;
+    font-size: 100px;
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+
+}

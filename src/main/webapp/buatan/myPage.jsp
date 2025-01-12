@@ -26,9 +26,8 @@
         if ("ADMIN".equals(role)) { 
         %>
 				<a href="productForm.jsp">Product Regist</a>
-				<% }else{ %>
+				<% }%>
 				<a href="cartList.jsp">Cart List</a>
-				<%} %>
 				<a href="modifyForm.jsp">Edit Member</a>
 				<a href="deleteForm.jsp" class="logout">Cancel Member</a>
 		</div>

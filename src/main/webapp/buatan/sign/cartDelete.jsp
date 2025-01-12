@@ -7,7 +7,7 @@
     String productNumParam = request.getParameter("productNum");
 
     if (userId == null || productNumParam == null) {
-        response.sendRedirect(request.getContextPath() + "/board/shopping/cart/cartList.jsp");
+        response.sendRedirect(request.getContextPath() + "/buatan/cartList.jsp");
         return;
     }
 
@@ -17,7 +17,7 @@
     boolean isDeleted = cartDAO.deleteCartItem(userId, productNum);
 
     if (isDeleted) {
-        out.println("<script>alert('상품이 삭제되었습니다.'); location.href='" + request.getContextPath() + "/board/shopping/cart/cartList.jsp';</script>");
+        out.println("<script>alert('상품이 삭제되었습니다.'); location.href='" + request.getContextPath() + "/buatan/cartList.jsp';</script>");
     } else {
         out.println("<script>alert('삭제 중 문제가 발생했습니다.'); history.back();</script>");
     }

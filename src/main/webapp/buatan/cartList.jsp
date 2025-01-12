@@ -98,7 +98,7 @@
 			        <p class="product-price">가격: <%= product.getPrice() %>원</p>
 			        <p class="product-total-price">합계: <%= product.getPrice() * quantity %>원</p>
 			        <!-- 삭제 버튼 -->
-			        <form method="post" action="<%= request.getContextPath() %>/sign/cartDelete.jsp" style="margin-top: 10px;">
+			        <form method="post" action="<%= request.getContextPath() %>/buatan/sign/cartDelete.jsp" style="margin-top: 10px;">
 			            <input type="hidden" name="productNum" value="<%= productNum %>">
 			            <button type="submit" class="delete-cart-button">삭제하기</button>
 			        </form>

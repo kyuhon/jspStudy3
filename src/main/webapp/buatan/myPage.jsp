@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	String role = (String) session.getAttribute("role");
+%>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +22,13 @@
     </div>
 
 		<div class="myPage">
+				<% 
+        if ("ADMIN".equals(role)) { 
+        %>
+				<a href="productForm.jsp">Product Regist</a>
+				<% }else{ %>
 				<a href="cartList.jsp">Cart List</a>
+				<%} %>
 				<a href="modifyForm.jsp">Edit Member</a>
 				<a href="deleteForm.jsp" class="logout">Cancel Member</a>
 		</div>

@@ -1,11 +1,10 @@
 @charset "UTF-8";
-
+/*board.jsp, content.jsp  */
   
 .body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
     color: #333;
 }
 
@@ -19,9 +18,20 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.write {
+	border: none;
+	color: white;
+	background-color: black;
+	text-decoration: none;
+	padding: 10px 17px;
+	font-size: 14px;
+  font-weight: bold;
+}
+
 .tableHead {
     display: flex;
     justify-content: space-between;
+    height: 30px;
 }
 
 .board th {
@@ -101,6 +111,14 @@ input[type="reset"] {
 	color: white;
 	background-color: black;
 }
+
+pre {
+	white-space: pre-wrap;      /* CSS3 */
+  white-space: -moz-pre-wrap; /* Firefox */
+  white-space: -o-pre-wrap;   /* Opera 7 */
+  word-wrap: break-word;			/* Internet Explorer 5.5+ */
+}
+
 
 footer{
     width: 100%;

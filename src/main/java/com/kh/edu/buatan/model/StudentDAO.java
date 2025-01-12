@@ -19,8 +19,9 @@ public class StudentDAO {
 	private final String SELECT_ONE_SQL = "SELECT * FROM STUDENT WHERE ID = ?";
 	private final String SELECT_BY_ID_SQL = "SELECT count(*) as count FROM STUDENT WHERE ID = ?";
 	private final String SELECT_LOGIN_SQL = "SELECT PASS FROM STUDENT WHERE ID = ?";
+	private final String SELECT_ROLE_SQL = "SELECT ROLE FROM STUDENT WHERE ID = ?";	
 	private final String SELECT_LOGIN_CHECK_SQL = "SELECT * FROM STUDENT WHERE ID = ? AND PWD = ?";
-	private final String INSERT_SQL = "insert into student values(?,?,?,?,?,?,?,?,?,?)";
+	private final String INSERT_SQL = "insert into student (ID, PASS, NAME, PHONE1, PHONE2, PHONE3, EMAIL, ZIPCODE, ADDRESS1, ADDRESS2) values (?,?,?,?,?,?,?,?,?,?)";
 	private final String DELETE_SQL = "DELETE FROM STUDENT WHERE ID = ?";
 	private final String UPDATE_SQL = "update student set pass=?, phone1=?, phone2=?, phone3=?, "
 			+ "email=?, zipcode=?, address1=?, address2=? where id=?";
@@ -237,6 +238,23 @@ public class StudentDAO {
 		return check;
 	}
 	
+	public String getUserRole(String id) {
+	    	String role = "user"; // 기본값
+	    	ConnectionPool cp = ConnectionPool.getInstance(); 
+	    	Connection con = cp.dbCon();
+	    	PreparedStatement pstmt = null;	
+	    try {
+	        pstmt = con.prepareStatement(SELECT_ROLE_SQL);
+	        pstmt.setString(1, id);
+	        ResultSet rs = pstmt.executeQuery();
+	        if (rs.next()) {
+	            role = rs.getString("role");
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    return role;
+	}
 	
 	
 }

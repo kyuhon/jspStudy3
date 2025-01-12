@@ -20,7 +20,6 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Board</title>
 <link rel="stylesheet" href="css/board.css">
-<script language="javascript" src="script.js?timestamp=<%= System.currentTimeMillis() %>"></script>
 </head>
 <body>
 	<%@ include file="/buatan/piece/header.jsp"%>
@@ -34,8 +33,8 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	<div class="board" >
 		<div class="tableHead">
 			<tr>
-				<b>글목록(전체 글:<%=count%>)</b>
-				<p><a href="writeForm.do">글쓰기</a></p>
+				<b>List(total:<%=count%>)</b>
+				<p><a class="write" href="writeForm.do">Writing</a></p>
 			</tr>
 			</div>
 		<%
@@ -44,17 +43,18 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		<table>
 			<tr>
 				<td align="center">게시판에 저장된 글이 없습니다.</td>
+			</tr>
 		</table>
 		<%
 		} else {
 		%>
 		<table>
 			<tr>
-				<th>번 호</th>
-				<th>제 목</th>
-				<th>작성자</th>
-				<th>작성일</th>
-				<th>조 회</th>
+				<th>Number</th>
+				<th>Title</th>
+				<th>Writer</th>
+				<th>Date</th>
+				<th>Views</th>
 				<th>IP</th>
 			</tr>
 			<%
@@ -141,9 +141,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		<!-- 수정 <7> -->
 </div>
 	
-	<footer>
-		<p>footer</p>
-	</footer>
+	<%@ include file="/buatan/piece/footer.jsp"%>
 	
 </body>
 </html>

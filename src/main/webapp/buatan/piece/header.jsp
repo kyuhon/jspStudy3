@@ -52,7 +52,7 @@
         </ul>
         <ul class="header_right">
             <li class="x"><a href="#" >About us</a></li>
-            <li class="x"><a href="#" >Sell</a></li>
+            <li class="x"><a href="check/checkSession.jsp?target=/jspStudy3/buatan/productList.jsp" >Sell</a></li>
             <li class="x"><a href="check/checkSession.jsp?target=/jspStudy3/buatan/board.do">Board</a></li>
             <li class="x"><a href="./signUp.jsp">Sign up</a></li>
 						<% if(id != null){ %>

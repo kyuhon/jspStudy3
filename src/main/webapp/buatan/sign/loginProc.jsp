@@ -15,8 +15,11 @@ int check = sdao.selectLoginCheck(svo);
 --화면설계
 <%
 if (check == 1) {//로그인 성공
+	String role = sdao.getUserRole(id);
+	System.out.println(role);
 	session.setAttribute("id", id);
-	session.setAttribute("pass", pass);
+	session.setAttribute("userId", id);
+	session.setAttribute("role", role);
 	response.sendRedirect("../title.jsp");
 } else if (check == 0) {//아이디는 있는데 비밀번호 오류
 %>

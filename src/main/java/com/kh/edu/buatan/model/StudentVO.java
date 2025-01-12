@@ -11,10 +11,13 @@ public class StudentVO {
 	private String zipcode;
 	private String address1;
 	private String address2;
+	private String originFile;
+	private String sysFile;
+	private String role; 
 	public StudentVO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
+	
 	public StudentVO(String id, String pass, String name, String phone1, String phone2, String phone3, String email,
 			String zipcode, String address1, String address2) {
 		super();
@@ -29,6 +32,27 @@ public class StudentVO {
 		this.address1 = address1;
 		this.address2 = address2;
 	}
+
+	public StudentVO(String id, String pass, String name, String phone1, String phone2, String phone3, String email,
+			String zipcode, String address1, String address2, String originFile, String sysFile, String role) {
+		super();
+		this.id = id;
+		this.pass = pass;
+		this.name = name;
+		this.phone1 = phone1;
+		this.phone2 = phone2;
+		this.phone3 = phone3;
+		this.email = email;
+		this.zipcode = zipcode;
+		this.address1 = address1;
+		this.address2 = address2;
+		this.originFile = originFile;
+		this.sysFile = sysFile;
+		this.role = role;
+	}
+
+	
+
 	public String getId() {
 		return id;
 	}
@@ -89,5 +113,24 @@ public class StudentVO {
 	public void setAddress2(String address2) {
 		this.address2 = address2;
 	}
+	public String getOriginFile() {
+		return originFile;
+	}
+	public void setOriginFile(String originFile) {
+		this.originFile = originFile;
+	}
+	public String getSysFile() {
+		return sysFile;
+	}
+	public void setSysFile(String sysFile) {
+		this.sysFile = sysFile;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+
 	
 }

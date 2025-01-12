@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SignUp</title>
 <link rel="stylesheet" href="css/signUp.css">
-<script language="javascript" src="script.js?timestamp=<%= System.currentTimeMillis() %>"></script>
+<script language="javascript" src="js/script.js?timestamp=<%= System.currentTimeMillis() %>"></script>
 </head>
 <body>
 	<%@ include file="/buatan/piece/header.jsp"%>

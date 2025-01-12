@@ -62,7 +62,7 @@ ul > li > div > a {
 
 }
 ul  > li:hover > a {
-    color: rgb(79, 219, 79)
+    color: rgb(79, 219, 79);
 }
 
 .dropdown {

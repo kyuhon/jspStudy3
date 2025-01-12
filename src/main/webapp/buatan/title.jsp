@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +20,12 @@
     	<%@ include file="/buatan/piece/main.jsp"%>
     </div>
     
-    <footer>
-        <p>footer</p>
-    </footer>
+    <%@ include file="/buatan/piece/carousel.jsp"%>
+    
+    <nav>
+    		<p>main2</p>
+    <nav>
+   <%@ include file="/buatan/piece/footer.jsp"%>
 
 
 </body>

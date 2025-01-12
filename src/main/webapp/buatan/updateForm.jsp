@@ -58,7 +58,6 @@ BoardVO article = (BoardVO)request.getAttribute("article");
 				<tr>
 					<td colspan=2 align="center">
 						<input type="submit" value="글수정">
-						<input type="reset" value="다시작성">
 						<input type="button" value="목록보기" onclick="document.location.href='board.do?pageNum=<%=pageNum%>'">
 					</td>
 				</tr>
